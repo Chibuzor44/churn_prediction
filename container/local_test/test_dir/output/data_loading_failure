@@ -1,0 +1,17 @@
+Exception during reading data: u"None of [Index([u'city', u'phone'], dtype='object')] are in the [columns]"
+Traceback (most recent call last):
+  File "/opt/program/train", line 75, in data_preprocess
+    df = clean_data(df)
+  File "/opt/program/train", line 47, in clean_data
+    df = pd.get_dummies(df, columns=['city','phone'], drop_first=False)
+  File "/usr/local/lib/python2.7/dist-packages/pandas/core/reshape/reshape.py", line 812, in get_dummies
+    data_to_encode = data[columns]
+  File "/usr/local/lib/python2.7/dist-packages/pandas/core/frame.py", line 2934, in __getitem__
+    raise_missing=True)
+  File "/usr/local/lib/python2.7/dist-packages/pandas/core/indexing.py", line 1354, in _convert_to_indexer
+    return self._get_listlike_indexer(obj, axis, **kwargs)[1]
+  File "/usr/local/lib/python2.7/dist-packages/pandas/core/indexing.py", line 1161, in _get_listlike_indexer
+    raise_missing=raise_missing)
+  File "/usr/local/lib/python2.7/dist-packages/pandas/core/indexing.py", line 1246, in _validate_read_indexer
+    key=key, axis=self.obj._get_axis_name(axis)))
+KeyError: u"None of [Index([u'city', u'phone'], dtype='object')] are in the [columns]"

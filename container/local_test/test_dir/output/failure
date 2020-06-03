@@ -1,0 +1,5 @@
+Exception during training: global name 'trainingParams' is not defined
+Traceback (most recent call last):
+  File "/opt/program/train", line 103, in train
+    max_leaf_nodes = trainingParams.get('max_leaf_nodes', None)
+NameError: global name 'trainingParams' is not defined
